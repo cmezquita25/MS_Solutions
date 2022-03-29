@@ -1,0 +1,66 @@
+﻿@page "/deleteInscripciones/{id:int}"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>ELIMINAR INSCRIPCION</h1>
+        </div>
+
+        <div class="container" style="width: 50%">
+            <p class="text-muted">
+                ¿Estas seguro que deseas eliminar esta inscripcion? Los datos seran eliminados para siempre y no podran ser recuperdos.
+            </p>
+        </div>
+
+        <br />
+
+        <button class="btn btn-outline-dark" @onclick="Eliminar">Confirmar</button>
+        <a class="btn btn-outline-primary" href="/Inscripciones">Cancelar</a>
+    </center>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    Inscripcion inscripcion;
+
+    protected override async Task OnInitializedAsync()
+    {
+        inscripcion = await HTTP.GetFromJsonAsync<Inscripcion>($"/api/Admin/Inscripcion/{id}");
+    }
+    protected async Task Eliminar()
+    {
+        var response = await HTTP.DeleteAsync($"/api/Estudiante/CancelarInscripcion/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/Inscripciones");
+        }
+    }
+}
+

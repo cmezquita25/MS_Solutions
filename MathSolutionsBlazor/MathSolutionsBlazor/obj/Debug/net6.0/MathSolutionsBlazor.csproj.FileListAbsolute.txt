@@ -1,0 +1,139 @@
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.Development.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.staticwebassets.runtime.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.exe
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.deps.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.runtimeconfig.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.AssemblyReference.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfoInputs.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfo.cs
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CoreCompileInputs.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cs
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.build.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.development.json
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\bundle\MathSolutionsBlazor.styles.css
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\projectbundle\MathSolutionsBlazor.bundle.scp.css
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\refint\MathSolutionsBlazor.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.genruntimeconfig.cache
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\ref\MathSolutionsBlazor.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Castle.Core.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Humanizer.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Tewr.Blazor.FileReader.dll
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\MathSolutions\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CopyComplete
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.staticwebassets.runtime.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.exe
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.deps.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.runtimeconfig.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Tewr.Blazor.FileReader.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.AssemblyReference.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfoInputs.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfo.cs
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CoreCompileInputs.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cs
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\bundle\MathSolutionsBlazor.styles.css
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\projectbundle\MathSolutionsBlazor.bundle.scp.css
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CopyComplete
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\refint\MathSolutionsBlazor.dll
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.genruntimeconfig.cache
+C:\Users\Sucus\Desktop\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\ref\MathSolutionsBlazor.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\appsettings.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.staticwebassets.runtime.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.exe
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.deps.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.runtimeconfig.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Humanizer.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\bin\Debug\net6.0\Tewr.Blazor.FileReader.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.AssemblyReference.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfoInputs.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.AssemblyInfo.cs
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CoreCompileInputs.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.RazorAssemblyInfo.cs
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\bundle\MathSolutionsBlazor.styles.css
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\projectbundle\MathSolutionsBlazor.bundle.scp.css
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.csproj.CopyComplete
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\refint\MathSolutionsBlazor.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.pdb
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\MathSolutionsBlazor.genruntimeconfig.cache
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\ref\MathSolutionsBlazor.dll
+C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css

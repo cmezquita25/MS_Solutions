@@ -1,0 +1,152 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MathSolutionsBlazor
+build_property.RootNamespace = MathSolutionsBlazor
+build_property.ProjectDir = C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\cmezq\Downloads\Proyecto APW Guillie\MathSolutionsBlazor\MathSolutionsBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Courses/AddCursos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xBZGRDdXJzb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Courses/Cursos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xDdXJzb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Courses/DeleteCursos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xEZWxldGVDdXJzb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Courses/UpdateCursos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xVcGRhdGVDdXJzb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Inscripcions/AddInscripciones.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25zXEFkZEluc2NyaXBjaW9uZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Inscripcions/DeleteInscripciones.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25zXERlbGV0ZUluc2NyaXBjaW9uZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Inscripcions/Inscripciones.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25zXEluc2NyaXBjaW9uZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Inscripcions/UpdateInscripciones.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25zXFVwZGF0ZUluc2NyaXBjaW9uZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Layout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Login/LoginAdmin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW5BZG1pbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Login/LoginStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW5TdHVkZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Login/LoginTeacher.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW5UZWFjaGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Register/RegisterStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJcUmVnaXN0ZXJTdHVkZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Register/RegisterTeacher.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJcUmVnaXN0ZXJUZWFjaGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Students/DeleteEstudiantes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlRXN0dWRpYW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Students/Estudiantes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRXN0dWRpYW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Students/UpdateEstudiantes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcVXBkYXRlRXN0dWRpYW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Teachers/DeleteProfesores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhY2hlcnNcRGVsZXRlUHJvZmVzb3Jlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Teachers/Profesores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhY2hlcnNcUHJvZmVzb3Jlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Teachers/UpdateProfesores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhY2hlcnNcVXBkYXRlUHJvZmVzb3Jlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6ztcnb6zcb
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xirkxfcw7b
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cmezq/Downloads/Proyecto APW Guillie/MathSolutionsBlazor/MathSolutionsBlazor/Pages/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xvZ2luTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

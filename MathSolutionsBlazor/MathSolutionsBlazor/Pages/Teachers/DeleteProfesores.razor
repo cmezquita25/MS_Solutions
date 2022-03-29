@@ -1,0 +1,82 @@
+﻿@page "/deleteProfesor/{id:int}"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>ELIMINAR PROFESOR</h1>
+        </div>
+
+        <div class="container" style="width: 50%">
+            <p class="text-muted">
+                ¿Estas seguro que deseas eliminar a este profesor? Los datos seran eliminados para siempre y no podran ser recuperdos.
+            </p>
+        </div>
+
+        <br />
+
+
+        <button class="btn btn-outline-dark" @onclick="Eliminar">Confirmar</button>
+        <a class="btn btn-outline-primary" href="/updateProfesor/@session.id">Cancelar</a>
+    </center>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    Profesor profesor;
+
+    Session session = new Session();
+
+    protected override async Task OnInitializedAsync()
+    {
+        profesor = await HTTP.GetFromJsonAsync<Profesor>($"/api/Profesor/{id}");
+    }
+    protected async Task Eliminar()
+    {
+        var response = await HTTP.DeleteAsync($"/api/CuentaProfesor/EliminarCuenta/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/profesor");
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

@@ -1,0 +1,283 @@
+﻿@page "/"
+
+<!-- Header-->
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container">
+            <h1 class="masthead-heading">MATH SOLUTIONS</h1>
+            <h2 class="masthead-subheading">Ideas for everyone</h2>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+    <div class="bg-circle-5 bg-circle"></div>
+</header>
+
+
+
+
+<!-- Content section 1-->
+@if (session.rol == "estudiante")
+{
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://innovacioneconomica.com/wp-content/uploads/2020/07/cursos-dicoi.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Cursos</h2>
+                        <p>
+                            Por medio de este apartado usted puede acceder a los cursos
+                            que se encuentran activos a dia de hoy, con los cuales usted
+                            puede adquirir diversos conocimientos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://images.squarespace-cdn.com/content/v1/53aadf1de4b0a0a817640cca/1599144274399-3HK0O0EVNZFIKNG4T7J3/maestro+profesor+instructor.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Profesores</h2>
+                        <p>
+                            Por medio de este apartado usted puede consultar a nuestros profesores
+                            certificados y completamente capacitados para la imparticion de las asignaturas
+                            previas a verse en los cursos que ofrecemos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (session.rol == "director")
+{
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://innovacioneconomica.com/wp-content/uploads/2020/07/cursos-dicoi.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Cursos</h2>
+                        <p>
+                            Por medio de este apartado usted puede acceder a los cursos
+                            que se encuentran activos a dia de hoy, con los cuales usted
+                            puede acquirir diversos conocimientos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+
+<!-- Content section 2-->
+@if (session.rol == "director")
+{
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://images.squarespace-cdn.com/content/v1/53aadf1de4b0a0a817640cca/1599144274399-3HK0O0EVNZFIKNG4T7J3/maestro+profesor+instructor.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Profesores</h2>
+                        <p>
+                            Por medio de este apartado usted puede consultar a nuestros profesores
+                            certificados y completamente capacitados para la imparticion de las asignaturas
+                            previas a verse en los cursos que ofrecemos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+
+
+<!-- Content section 3-->
+@if (session.rol == "profesor")
+{
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://innovacioneconomica.com/wp-content/uploads/2020/07/cursos-dicoi.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Cursos</h2>
+                        <p>
+                            Por medio de este apartado usted puede acceder a los cursos
+                            que se encuentran activos a dia de hoy, con los cuales usted
+                            puede adquirir diversos conocimientos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://i.postimg.cc/5tZkSqR4/03.png" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Estudiantes</h2>
+                        <p>
+                            Por medio de este apartado usted puede consultar a nuestros estudiantes
+                            registrados en los cursos, con el fin de asi llevar un control sobre los mismos
+                            y tener la nocion de los cursos en los que se encuentren inscritos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else if (session.rol == "director")
+{
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://i.postimg.cc/5tZkSqR4/03.png" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Estudiantes</h2>
+                        <p>
+                            Por medio de este apartado usted puede consultar a nuestros estudiantes
+                            registrados y su informacion general con la que fueron registrados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="https://mexico.unir.net/wp-content/uploads/2018/07/becas-y-ayudas.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Inscripciones</h2>
+                        <p>
+                            Usted podrá consultar a todos nuestros  alumnos inscritos
+                            en los cursos, con el fin de asi llevar un control sobre los mismos
+                            y tener la nocion de los cursos en los que se encuentren inscritos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+@*Modo sin validaciones abajo*@
+
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="/MSComponents/assets/img/02.jpg" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Misión</h2>
+                    <p style="text-align: justify;">
+                        Contribuir con el aprendizaje de las personas, poniendo a su disposición
+                        cursos con profesores capacitados para cualquier momento en el que las personas
+                        sientan que tienen problemas con las matemáticas o con cualquier otra materia,
+                        y gestionando los procesos de manera que creen valor para la compañía a la vez que
+                        para la sociedad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="/MSComponents/assets/img/01.jpg" alt="..." /></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Visión</h2>
+                    <p style="text-align: justify;">
+                        Ser una empresa reconocida como líder en aprendizaje, interés y conocimiento a
+                        nivel mundial por parte de sus usuarios, profesores, estudiantes y todos los grupos
+                        de interés relacionados con la actividad de la compañía
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="https://resources.uss.cl/upload/2021/09/Econom%C3%ADa-y-valores-humanos-imagen-principal.jpg" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Valores</h2>
+                    <p style="text-align: justify;">
+                        Accesibilidad, educación, inclusión, colaboración, responsabilidad,
+                        pasión, seguridad, creatividad, unión y trabajo en equipo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@code {
+    Session session = new Session();
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+    }
+}

@@ -1,0 +1,101 @@
+﻿@page "/loginStudent"
+@using MathSolutionsBlazor.Auth
+@using MathSolutionsBlazor.Data
+@using MathSolutionsBlazor.Data.Models
+@using MathSolutionsBlazor.Helpers
+@inject HttpClient HTTP
+@inject NavigationManager NavigationManager
+@inject ILocalStorage LocalStorage
+
+
+
+<br />
+<br />
+<br />
+<br />
+    <div class="tittle">
+        <center>
+            <div class="tittle_content">
+                <h1 style="font-size: 80px;">MATH SOLUTIONS</h1>
+            </div>
+
+            <div class="container" style="width: 50%">
+                <p class="text-muted"><i>Ideas for everyone</i></p>
+            </div>
+        </center>
+    </div>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://img.freepik.com/vector-gratis/grupo-estudiantes-secundaria-adolescentes-personajes-dibujos-animados-mochila-escolar_102902-340.jpg?w=1480" class="img-fluid"
+                     alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="container" style="background-color: whitesmoke; border-radius: 20px;">
+                    <br />
+                <EditForm Model="@session">
+                    <form @onsubmit="Save">
+
+                        <div class="divider d-flex align-items-center my-4">
+                            <h2 class="text-center fw-bold mx-3 mb-0">ACCESO ESTUDIANTES</h2>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example3">Correo</label>
+                            <InputText type="text" @bind-Value="@session.correo" id="form3Example3" class="form-control form-control-lg"
+                               required        placeholder="Ingrese su correo electrónico" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <label class="form-label" for="form3Example4">Contraseña</label>
+                            <InputText type="password" @bind-Value="@session.clave" id="form3Example4" class="form-control form-control-lg"
+                                required       placeholder="Ingrese su contraseña" />
+                        </div>
+
+                        <center>
+                                <button class="btn btn-dark btn-lg" type="submit" style="padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar Sesión</button>
+                        </center>
+                    </form>
+                </EditForm>
+                <br />
+                <center>
+                    <p>¿No tienes cuenta?<a href="registerStudent"> Registrate!</a></p>
+                </center>
+                <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    Session session = new Session();
+    string Mensaje = "";
+    Estudiante estudiante = new Estudiante();
+
+    protected async Task Save()
+    {
+        //HttpResponseMessage response;
+        estudiante = await HTTP.GetFromJsonAsync<Estudiante>($"api/Estudiante/Login/{session.correo}/{session.clave}");
+
+        if (estudiante != null)
+        {
+            session.id = estudiante.IdEstudiante;
+            session.rol = "estudiante";
+            session.correo = estudiante.Correo;
+            await LocalStorage.SetValue<Session>(ValuesKeys.Persona, session);
+            //Mensaje = "Atenticacion correcta";
+            NavigationManager.NavigateTo("/", forceLoad: true);
+        }
+        else
+        {
+            Mensaje = "No estás registtrada";
+        }
+
+    }
+
+
+}

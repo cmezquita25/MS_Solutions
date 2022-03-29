@@ -1,0 +1,119 @@
+﻿@page "/registerTeacher"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>REGISTRO DE PROFESORES</h1>
+        </div>
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Bienvenido! crea  una cuenta con nosotros y empieza a disfrutar los beneficios de ser parte del Equipo MathSolutions
+                </p>
+            </div>
+    </center>
+</div>
+<br />
+
+<div class="container" style="width: 40%; background-color: whitesmoke; border-radius: 20px;">
+<EditForm Model="@profesor">
+    <form class="container-border" @onsubmit="Save">
+        <br />
+        <div class="form-row">
+            <div class="col">
+                <fieldset class=" mx-auto" style="width: auto;">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="nombre_completo">Nombre completo</label>
+                            <InputText type="text" class="form-control" @bind-Value="@profesor.NombreCompleto" id="nombre_completo" placeholder="" required/>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="correo_electronico">Correo</label>
+                            <InputText type="email" class="form-control" @bind-Value="@profesor.Correo" id="correo_electronico" placeholder="" required />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="contrasena">Contraseña</label>
+                            <InputText ype="password" class="form-control" @bind-Value="@profesor.Clave" id="contrasena" placeholder="" required/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="red_social">Redes Sociales</label>
+                            <InputText type="text" required
+                                       class="form-control" id="red_social"
+                                       placeholder="facebook, twiter, instagram, whatsapp, etc..."
+                                       @bind-Value="@profesor.RedesSociales" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br />
+            <div class="form-group col-md-12">
+                <label for="descripcion_del_curso">Descripcion del curso: </label>
+                <InputTextArea type="text" required
+                               class="form-control" id="descripcion_del_curso"
+                               placeholder="Escriba un poco sobre usted..."
+                               @bind-Value="@profesor.Descripcion">
+                </InputTextArea>
+            </div>
+
+        <br />
+
+        <center>
+            <button type="submit" @onclick="Save" class="btn btn-dark">Registrar</button>
+            <a class="btn btn-primary" href="/">Regresar</a>
+        </center>
+    </form>
+</EditForm>
+<br />
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    IList<Profesor> profesores;
+
+    Profesor profesor = new Profesor();
+
+    protected override async Task OnInitializedAsync()
+    {
+        profesores = await HTTP.GetFromJsonAsync<IList<Profesor>>("api/CuentaProfesor/TodosLosProfesores");
+    }
+
+    protected async Task Save()
+    {
+        HttpResponseMessage response;
+
+        response = await HTTP.PostAsJsonAsync<Profesor>($"api/CuentaProfesor/Registrarse", profesor);
+    
+        Profesor Saved = response.Content.ReadFromJsonAsync<Profesor>().Result;
+
+        NavigationManager.NavigateTo("/loginTeacher", forceLoad: true);
+    }
+   }
+

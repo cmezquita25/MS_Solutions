@@ -1,0 +1,135 @@
+﻿@page "/updateProfesor/{id:int}"
+@using MathSolutionsBlazor.Data
+
+
+<br />
+<br />
+<br />
+<br />
+
+<EditForm Model="@profesor">
+    <form class="container-border" @onsubmit="Save">
+
+        @if (@session.rol == "profesor")
+        {
+            <center>
+                <h1>MI PERFIL</h1>
+            </center>
+        }
+        else if (@session.rol == "director")
+        {
+            <center>
+                <h1>ACTUALIZAR INFORMACION</h1>
+            </center>
+        }
+        <div class="form-row">
+            <div class="col">
+                <fieldset class=" mx-auto" style="width: 450px;">
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-9 mx-auto">
+                            <label for="nombre_completo">Nombre completo</label>
+                            <InputText type="text" class="form-control" @bind-Value="@profesor.NombreCompleto" id="nombre_completo" placeholder="Nombre completo" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-9 mx-auto">
+                            <label for="correo_electronico">Correo electronico</label>
+                            <InputText type="text" class="form-control" @bind-Value="@profesor.Correo" id="correo_electronico" placeholder="Correo electronico institucional" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-9 mx-auto">
+                            <label for="contrasena">Contraseña</label>
+                            <InputText type="text" class="form-control" @bind-Value="@profesor.Clave" id="contrasena" placeholder="Contraseña" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-9 mx-auto">
+                            <label for="red_social">Red social</label>
+                            <InputText type="text"
+                                       class="form-control" id="red_social"
+                                       placeholder="Pegue aqui la url de una red social"
+                                       @bind-Value="@profesor.RedesSociales" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br />
+        <center>
+            <div class="form-group col-md-3 mx-auto">
+                <label for="descripcion_del_curso">Descripcion del curso: </label>
+                <InputTextArea type="text"
+                               class="form-control" id="descripcion_del_curso"
+                               placeholder="Breve descripcion del curso que imparte"
+                               @bind-Value="@profesor.Descripcion">
+                </InputTextArea>
+            </div>
+        </center>
+
+        <br />
+
+        <center>
+            <button type="submit" @onclick="Save" class="btn btn-outline-dark">Actualizar</button>
+            <a class="btn btn-outline-warning" href="/deleteProfesor/@profesor.IdProfesor">Eliminar cuenta</a>
+            <a class="btn btn-outline-primary" href="/">Regresar</a>
+        </center>
+    </form>
+</EditForm>
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    IList<Profesor> profesores;
+
+    Profesor profesor = new Profesor();
+    Session session = new Session();
+
+    protected override async Task OnInitializedAsync()
+    {
+        profesores = await HTTP.GetFromJsonAsync<IList<Profesor>>("/api/CuentaProfesor/TodosLosProfesores");
+
+        var response = await HTTP.GetFromJsonAsync<Profesor>($"/api/Profesor/{id}");
+        if (response != null)
+        {
+            profesor = response;
+        }
+    }
+
+    protected async Task Save()
+    {
+        HttpResponseMessage response;
+
+        response = await HTTP.PutAsJsonAsync<Profesor>($"/api/Profesor/ModificarInfo/{id}", profesor);
+
+        Profesor Saved = response.Content.ReadFromJsonAsync<Profesor>().Result;
+
+        NavigationManager.NavigateTo($"/");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if(session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}
+

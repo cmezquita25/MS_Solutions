@@ -1,0 +1,104 @@
+﻿@page "/addInscripciones"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<EditForm Model="@inscripcion">
+    <form class="container-border" @onsubmit="Save">
+        <center>
+            <h1>Inscribirse</h1>
+        </center>
+        <br />
+        <div class="form-row">
+            <div class="col">
+                <fieldset class=" mx-auto" style="width: 450px;">
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label class="col-form-label" for="idestudiante">Estudiante</label>
+                            <InputSelect required class="form-control" @bind-Value="@inscripcion.IdEstudiante" id="idestudiante">
+                                <option value="-1" disabled>Seleccione al estudiante...</option>
+                                @if (loading)
+                                {
+                                    <option value="0" disabled>Cargando...</option>
+                                }
+                                else if (estudiantes != null)
+                                {
+                                    @foreach (var estudiante in estudiantes)
+                                    {
+                                        <option value="@estudiante.IdEstudiante">@estudiante.NombreCompleto</option>
+                                    }
+                                }
+                            </InputSelect>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label class="col-form-label" for="idestudiante">Curso</label>
+                            <InputSelect required class="form-control" @bind-Value="@inscripcion.IdCurso" id="idestudiante">
+                                <option value="-1" disabled>Seleccione el curso...</option>
+                                @if (loading)
+                                {
+                                    <option value="0" disabled>Cargando...</option>
+                                }
+                                else if (cursos != null)
+                                {
+                                    @foreach (var curso in cursos)
+                                    {
+                                        <option value="@curso.IdCurso">@curso.Titulo</option>
+                                    }
+                                }
+                            </InputSelect>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <br />
+
+        <center>
+            <button type="submit" @onclick="Save" class="btn btn-outline-dark">Agregar</button>
+            <a class="btn btn-outline-primary" href="/Inscripciones">Cancelar</a>
+        </center>
+    </form>
+</EditForm>
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    bool loading = true;
+
+
+    IList<Curso> cursos;
+    IList<Estudiante> estudiantes;
+    IList<Inscripcion> inscripciones;
+
+    Inscripcion inscripcion = new Inscripcion();
+
+    protected override async Task OnInitializedAsync()
+    {
+        estudiantes = await HTTP.GetFromJsonAsync<IList<Estudiante>>("/api/CuentaEstudiante/TodosLosEstudiantes");
+        cursos = await HTTP.GetFromJsonAsync<IList<Curso>>("/api/Profesor/TodosLosCursos");
+        inscripciones = await HTTP.GetFromJsonAsync<IList<Inscripcion>>("/api/Inscripciones/TodosLosInscritos");
+
+        loading = false;
+    }
+
+    protected async Task Save()
+    {
+        HttpResponseMessage response;
+
+        response = await HTTP.PostAsJsonAsync<Inscripcion>("/api/Estudiante/Inscribirse", inscripcion);
+
+        Inscripcion Saved = response.Content.ReadFromJsonAsync<Inscripcion>().Result;
+
+        NavigationManager.NavigateTo("/Inscripciones");
+    }
+}

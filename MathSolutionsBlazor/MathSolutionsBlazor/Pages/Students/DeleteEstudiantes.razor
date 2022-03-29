@@ -1,0 +1,82 @@
+﻿@page "/deleteEstudiantes/{id:int}"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>ELIMINAR ESTUDIANTE</h1>
+        </div>
+
+        <div class="container" style="width: 50%">
+            <p class="text-muted">
+                ¿Estas seguro que deseas eliminar a este estudiante? Los datos seran eliminados para siempre y no podran ser recuperdos.
+            </p>
+        </div>
+
+        <br />
+
+        <button class="btn btn-outline-dark" @onclick="Eliminar">Confirmar</button>
+        <a class="btn btn-outline-primary" href="/updateEstudiante/@session.id">Cancelar</a>
+    </center>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    Estudiante estudiante;
+
+    Session session = new Session();
+
+    protected override async Task OnInitializedAsync()
+    {
+        estudiante = await HTTP.GetFromJsonAsync<Estudiante>($"/api/Estudiante/{id}");
+    }
+    protected async Task Eliminar()
+    {
+        var response = await HTTP.DeleteAsync($"/api/CuentaEstudiante/EliminarCuenta/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/Estudiantes");
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

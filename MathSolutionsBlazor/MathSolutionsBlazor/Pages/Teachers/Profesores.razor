@@ -1,0 +1,120 @@
+﻿@page "/profesor"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>NUESTROS MEJORES PROFESORES</h1>
+        </div>
+
+            <div class="container" style="width: 50%">
+                <p class="text-muted">Los mejores profesores al alcance de tu mano, comprometidos a ayudarte a superar tus miedos
+                    y enfretar los obstaculos en tus estudios
+                </p>
+            </div>
+    </center>
+</div>
+<br />
+
+@if (profesores == null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <div class="container" style="width: 100%; background-color: whitesmoke; border-radius: 20px;">
+    <br />
+    <br />
+        <div class="container" style="width: 90%">
+            <div class="row">
+            @foreach (var profesor in profesores)
+            {
+              <div class="col mb-4">
+                  <div class="card item" style="width: 550px;">
+                      <div class="card-header text-center">
+                          <h5>@profesor.NombreCompleto</h5>
+                      </div>
+
+                      <div class="card-body" style="text-align: justify;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Descripción
+                                <p class="card-text text-muted">@profesor.Descripcion</p>
+                            </li>
+                            
+                            <li class="list-group-item">
+                                Redes Sociales 
+                                <p class="card-text text-muted">@profesor.RedesSociales</p>
+                            </li>
+
+                            <li class="list-group-item">
+                                Correo Institucional
+                                <p class="card-text text-muted">@profesor.Correo</p>
+                                
+                            </li>
+                        </ul>
+                      </div>
+                @if (session.rol == "director")
+                {
+                      <div class="card-footer">
+                            <a href="/updateProfesor/@profesor.IdProfesor" type="button" class="btn btn-outline-primary">Editar</a>
+                            <a href="/deleteProfesor/@profesor.IdProfesor" type="button" class="btn btn-outline-dark">Eliminar</a>
+                      </div>
+                }
+                else
+                {
+                      <div class="card-footer">
+
+                      </div>
+                }
+
+                  </div>
+              </div>  
+            }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+
+    private IList<Profesor> profesores;
+
+    Session session = new Session();
+
+    private string NombrePersonaFiltro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        profesores = await HTTP.GetFromJsonAsync<IList<Profesor>>("api/CuentaProfesor/TodosLosProfesores");
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+    //private async Task Filtar()
+    //{
+
+    //}
+
+    //private async Task Limpiar()
+    //{
+        
+    //}
+}

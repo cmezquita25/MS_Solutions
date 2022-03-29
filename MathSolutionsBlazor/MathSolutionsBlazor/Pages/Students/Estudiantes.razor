@@ -1,0 +1,91 @@
+﻿@page "/Estudiantes"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>ESTUDIANTES REGISTRADOS</h1>
+        </div>
+            <div class="container" style="width: 50%">
+                <p class="text-muted"> Bienvenido administrador, aquí puede controlar las cuentas de los estudiantes registrados en el sitio</p>
+            </div>
+    </center>
+</div>
+<br />
+<br />
+
+@if (estudiantes == null)
+{
+    <p>Cargando...</p>
+}
+else
+{   <div class="container" style="width: 100%; background-color: whitesmoke; border-radius: 20px;">
+    <br />
+    <br />
+    <div class="container" style="width: 90%">
+    <div class="row">
+            @foreach (var estudiante in estudiantes)
+            {
+              <div class="col mb-4">
+                  <div class="card item" style="width: 350px;">
+                      <div class="card-header text-center">
+                          <h5>@estudiante.NombreCompleto</h5>
+                      </div>
+
+                      <div class="card-body" style="text-align: justify;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Correo
+                                <p class="card-text text-muted">@estudiante.Correo</p>
+                            </li>
+                            
+                            <li class="list-group-item">
+                                Contraseña 
+                                <p class="card-text text-muted">@estudiante.Clave</p>
+                            </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                            <a href="/updateEstudiante/@estudiante.IdEstudiante" type="button" class="btn btn-outline-primary">Editar</a>
+                            <a href="/deleteEstudiantes/@estudiante.IdEstudiante" type="button" class="btn btn-outline-dark">Eliminar</a>
+                      </div>
+                  </div>
+              </div>  
+            }
+            </div>
+            </div>
+    </div>
+}
+
+@code {
+
+    private IList<Estudiante> estudiantes;
+
+    Session session = new Session();
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        estudiantes = await HTTP.GetFromJsonAsync<IList<Estudiante>>("/api/CuentaEstudiante/TodosLosEstudiantes");
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

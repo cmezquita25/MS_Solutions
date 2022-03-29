@@ -1,0 +1,94 @@
+﻿@page "/loginAdmin"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<div class="tittle">
+        <center>
+            <div class="tittle_content">
+                <h1 style="font-size: 80px;">MATH SOLUTIONS</h1>
+            </div>
+
+            <div class="container" style="width: 50%">
+                <p class="text-muted"><i>Ideas for everyone</i></p>
+            </div>
+        </center>
+    </div>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <br />
+                <img src="https://thumbs.dreamstime.com/b/ministerio-del-interior-ejemplo-plano-del-vector-del-dise%C3%B1o-del-interior-moderno-de-ministerio-del-interior-con-la-mesa-y-el-71504898.jpg" class="img-fluid"
+                     alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="container" style="background-color: whitesmoke; border-radius: 20px;">
+                    <br />
+                <EditForm Model="@session">
+                    <form @onsubmit="Save">
+
+                        <div class="divider d-flex align-items-center my-4">
+                            <h2 class="text-center fw-bold mx-3 mb-0">ACCESO ADMINISTRADOR</h2>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example3">Cuenta</label>
+                            <InputText type="text" @bind-Value="@session.correo" id="form3Example3" class="form-control form-control-lg"
+                              required         placeholder="Ingrese su correo electrónico" />
+                            
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <label class="form-label" for="form3Example4">Contraseña</label>
+                            <InputText type="password" @bind-Value="@session.clave" id="form3Example4" class="form-control form-control-lg"
+                              required         placeholder="Ingrese su contraseña" />
+                            
+                        </div>
+
+
+                        <center>
+                            <button class="btn btn-dark btn-lg" type="submit" style="padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar Sesión</button>
+                        </center>
+                    </form>
+                </EditForm>
+                <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    Session session = new Session();
+    string Mensaje = "";
+    Admin admin = new Admin();
+
+    protected async Task Save()
+    {
+        //HttpResponseMessage response;
+        admin = await HTTP.GetFromJsonAsync<Admin>($"/api/Admin/LoginAdmin/{session.correo}/{session.clave}");
+
+        if (admin != null)
+        {
+            session.id = admin.IdAdmin;
+            session.rol = "director";
+            session.correo = admin.UserName;
+            await LocalStorage.SetValue<Session>(ValuesKeys.Persona, session);
+            //Mensaje = "Atenticacion correcta";
+            NavigationManager.NavigateTo("/", forceLoad: true);
+        }
+        else
+        {
+            Mensaje = "No estás registtrada";
+        }
+
+    }
+
+
+}

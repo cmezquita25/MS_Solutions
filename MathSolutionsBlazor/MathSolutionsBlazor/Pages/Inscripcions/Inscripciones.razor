@@ -1,0 +1,101 @@
+﻿@page "/Inscripciones"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>INSCRIPCIONES</h1>
+        </div>
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Controle las inscripciones de los estudiantes
+                </p>
+            </div>
+    </center>
+</div>
+<br />
+        <div class="container" style="justify-content: flex-start; display: flex; width: 80%">
+            <a href="/addInscripciones" class="btn btn-outline-success">
+                <i class="oi oi-plus"></i>
+                &nbsp;
+                Agregar una nueva inscripción
+            </a>
+        </div>
+<br />
+
+@if (inscripciones == null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <div class="container" style="width: 100%; background-color: whitesmoke; border-radius: 20px;">
+    <br />
+    <br />
+
+        <div class="container" style="width: 80%">
+            <div class="row">
+            @foreach (var inscripcion in inscripciones)
+            {
+               <div class="col mb-4">
+                  <div class="card item" style="width: 320px;">
+                      <div class="card-header text-center">
+                          <h5>@inscripcion.EstNombre(estudiantes)</h5>
+                      </div>
+
+                      <div class="card-body" style="text-align: justify;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Curso inscrito
+                                <p class="card-text text-muted"><b>@inscripcion.CursNombre(cursos)</b></p>
+                            </li>
+                        </ul>
+                      </div>
+
+                      <div class="card-footer">
+                            <a href="/updateInscripciones/@inscripcion.IdInscripcion" type="button" class="btn btn-outline-primary">Editar</a>
+                            <a href="/deleteInscripciones/@inscripcion.IdInscripcion" type="button" class="btn btn-outline-dark">Eliminar</a>
+                      </div>
+                  </div>
+              </div>   
+            }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private IList<Inscripcion> inscripciones;
+    private IList<Curso> cursos;
+    private IList<Estudiante> estudiantes;
+
+    Session session = new Session();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        inscripciones = await HTTP.GetFromJsonAsync<IList<Inscripcion>>("/api/Inscripciones/TodosLosInscritos");
+        estudiantes = await HTTP.GetFromJsonAsync<IList<Estudiante>>("/api/CuentaEstudiante/TodosLosEstudiantes");
+        cursos = await HTTP.GetFromJsonAsync<IList<Curso>>("/api/Profesor/TodosLosCursos");
+
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

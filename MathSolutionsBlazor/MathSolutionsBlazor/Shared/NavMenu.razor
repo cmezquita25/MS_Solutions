@@ -1,0 +1,120 @@
+﻿@using MathSolutionsBlazor.Auth
+@using MathSolutionsBlazor.Data
+@using MathSolutionsBlazor.Data.Models
+@using MathSolutionsBlazor.Helpers
+@inject ILocalStorage LocalStorage
+
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+
+    <div class="container px-5">
+        <a href="/"><img src="/MSComponents/logoMS_blanco.ico" alt="" width="60" height="50"></a>
+                        <!--BounceText-->
+        <div class="container" style="width: 500px;">
+            <marquee><a class="navbar-brand" href="/" style="font-size:30px;">Math Solutions</a></marquee>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+
+                @if (session.rol == null)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicar sesión
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="loginStudent">Estudiantes</a></li>
+                            <li><a class="dropdown-item" href="loginTeacher">Profesores</a></li>
+                            <li><a class="dropdown-item" href="loginAdmin">Administradores</a></li>
+                        </ul>
+                    </li>
+                }
+                else if (session.rol == "estudiante")
+                {                               
+                    <li class="nav-item"><a class="nav-link" href="profesor">Profesores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos">Cursos</a></li>
+
+                    <li class="nav-item dropdown">
+                                                                <!--BorderRadius -->             <!--Background-color -->  
+                        <a class="nav-link dropdown-toggle" style="border-radius: 5px 25px; background-color: rgba(61,119,204,0.7); " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @session.correo
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="updateEstudiante/@session.id">Mi perfil</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;" @onclick="Logout">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                }
+                else if (session.rol == "profesor")
+                {
+
+                    <li class="nav-item"><a class="nav-link" href="cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Inscripciones">Inscripciones</a></li>
+
+                    <li class="nav-item dropdown">
+                                                                    <!--BorderRadius -->             <!--Background-color --> 
+                        <a class="nav-link dropdown-toggle" style="border-radius: 5px 25px; background-color: rgba(184,75,75,0.7); " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @session.correo
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="updateProfesor/@session.id">Mi perfil</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;" @onclick="Logout">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                }
+                else if (session.rol == "director")
+                {                    
+                    <li class="nav-item dropdown">
+                                                                    <!--BorderRadius -->             <!--Background-color -->
+                        <a class="nav-link dropdown-toggle" style="border-radius: 5px 25px; background-color: rgba(121,107,158,0.7); " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @session.correo
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="cursos">Cursos</a></li>
+                            <li><a class="dropdown-item" href="profesor">Profesores</a></li>
+                            <li><a class="dropdown-item" href="Estudiantes">Estudiantes</a></li>
+                            <li><a class="dropdown-item" href="Inscripciones">Inscripciones</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;" @onclick="Logout">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                    
+                }
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    Session session = new Session();
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+    }
+    private void Logout()
+    {
+        LocalStorage.RemoveItem(ValuesKeys.Persona);
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

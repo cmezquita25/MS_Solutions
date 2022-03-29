@@ -1,0 +1,117 @@
+﻿@page "/updateEstudiante/{id:int}"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+
+<EditForm Model="@estudiante">
+    <form class="container-border" @onsubmit="Save">
+
+        <div class="mx-auto" style="width: 200px;">
+
+            @if (@session.rol == "estudiante")
+            {
+                <center>
+                    <h1>MI PERFIL</h1>
+                </center>
+            }
+            else if (@session.rol == "director")
+            {
+                <center>
+                    <h1>ACTUALIZAR INFORMACION</h1>
+                </center>
+            }
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <fieldset class=" mx-auto" style="width: 450px;">
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="nombre_completo">Nombre completo</label>
+                            <InputText type="text" class="form-control" id="nombre_completo"
+                                       placeholder="Nombre completo" @bind-Value="@estudiante.NombreCompleto" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="correo_electronico">Correo electrónico</label>
+                            <InputText type="text" class="form-control" id="correo_electronico"
+                                       placeholder="Correo institucional" @bind-Value="@estudiante.Correo" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="contrasena">Contraseña</label>
+                            <InputText type="text" class="form-control" id="contrasena"
+                                       placeholder="Contraseña" @bind-Value="@estudiante.Clave" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br />
+        <center>
+            <button type="submit" class="btn btn-outline-dark">Actualizar</button>
+            <a class="btn btn-outline-warning" href="/deleteEstudiantes/@estudiante.IdEstudiante">Eliminar cuenta</a>
+            <a class="btn btn-outline-primary" href="/">Regresar</a>
+        </center>
+
+    </form>
+</EditForm>
+
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    IList<Estudiante> estudiantes;
+
+    Estudiante estudiante = new Estudiante();
+
+    Session session = new Session();
+
+    protected override async Task OnInitializedAsync()
+    {
+        estudiantes = await HTTP.GetFromJsonAsync<IList<Estudiante>>("/api/CuentaEstudiante/TodosLosEstudiantes");
+
+        var response = await HTTP.GetFromJsonAsync<Estudiante>($"/api/Estudiante/{id}");
+        if (response != null)
+        {
+            estudiante = response;
+        }
+    }
+
+    protected async Task Save()
+    {
+        HttpResponseMessage response;
+
+        response = await HTTP.PutAsJsonAsync<Estudiante>($"/api/Estudiante/ModificarInfo/{id}", estudiante);
+
+        Estudiante Saved = response.Content.ReadFromJsonAsync<Estudiante>().Result;
+
+        NavigationManager.NavigateTo($"/");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+ }

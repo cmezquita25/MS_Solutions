@@ -1,0 +1,104 @@
+﻿@page "/registerStudent"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="tittle">
+    <center>
+        <div class="tittle_content">
+            <h1>REGISTRO DE ESTUDIANTES</h1>
+        </div>
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Bienvenido! crea  una cuenta con nosotros y empieza a disfrutar los beneficios de ser parte del Equipo MathSolutions
+                </p>
+            </div>
+    </center>
+</div>
+<br />
+<div class="container item" style="width: 40%; background-color: whitesmoke; border-radius: 20px;">
+<EditForm Model="@estudiante">
+    <form class="container-border" @onsubmit="Save">
+        <br />
+
+        <div class="form-row">
+            <div class="col">
+                <fieldset class=" mx-auto" style="width: auto;">
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="nombre_completo">Nombre completo</label>
+                            <InputText type="text" class="form-control" id="nombre_completo"
+                              required placeholder="" @bind-Value="@estudiante.NombreCompleto" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="correo_electronico">Correo</label>
+                            <InputText type="email" class="form-control" id="correo_electronico"
+                                required placeholder="" @bind-Value="@estudiante.Correo" />
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-8 mx-auto">
+                            <label for="contrasena">Contraseña</label>
+                            <InputText type="password" class="form-control" id="contrasena"
+                             required placeholder="" @bind-Value="@estudiante.Clave" />
+                        </div>
+                    </div>
+
+                    <br />
+
+                </fieldset>
+                                    <center>
+                        <button type="submit" @onclick="Save" class="btn btn-dark">Registrar</button>
+                        <a class="btn btn-primary" href="/">Cancelar</a>
+                    </center>
+            </div>
+        </div>
+    </form>
+</EditForm>
+<br />
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@code {
+
+    [Parameter]
+
+    public int id { get; set; }
+
+    IList<Estudiante> estudiantes;
+
+    Estudiante estudiante = new Estudiante();
+
+    protected override async Task OnInitializedAsync()
+    {
+        estudiantes = await HTTP.GetFromJsonAsync<IList<Estudiante>>("/api/CuentaEstudiante/TodosLosEstudiantes");
+    }
+
+    protected async Task Save()
+    {
+        HttpResponseMessage response;
+
+        response = await HTTP.PostAsJsonAsync<Estudiante>($"/api/CuentaEstudiante/Registrarse", estudiante);
+
+        Estudiante Saved = response.Content.ReadFromJsonAsync<Estudiante>().Result;
+
+        NavigationManager.NavigateTo("/loginStudent");
+    }
+   }

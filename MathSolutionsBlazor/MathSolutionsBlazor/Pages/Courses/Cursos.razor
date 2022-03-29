@@ -1,0 +1,232 @@
+﻿@page "/cursos"
+@using MathSolutionsBlazor.Data
+
+<br />
+<br />
+<br />
+<br />
+<br />
+@if (session.rol == "estudiante")
+{
+    <div class="tittle">
+        <center>
+            <div class="tittle_content">
+                <h1>CATÁLOGO DE CURSOS</h1>
+            </div>
+
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Aquí encontrarás una gran colección de todos los cursos disponibles para ti,
+                    impartidos por los mejores profesores comprometidos a mejorar tu desempeño académico.
+                </p>
+            </div>
+        </center>
+    </div>
+
+}
+else if (session.rol == "profesor")
+{
+    <div class="tittle">
+        <center>
+            <div class="tittle_content">
+                <h1>CURSOS IMPARTIDOS</h1>
+            </div>
+
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Vista de cursos que estás impartiendo
+                </p>
+            </div>
+        </center>
+    </div>
+    <br />
+    <br />
+    <div class="container" style="justify-content: flex-start; display: flex; width: 80%">
+        <a href="/addCursos" class="btn btn-outline-success">
+            <i class="oi oi-plus"></i>
+            &nbsp;
+            Agregar un nuevo curso
+        </a>
+    </div>
+
+}
+else if (session.rol == "director")
+{
+    <div class="tittle">
+        <center>
+            <div class="tittle_content">
+                <h1>TODOS LOS CURSOS</h1>
+            </div>
+            <div class="container" style="width: 50%">
+                <p class="text-muted">
+                    Bienvenido administrador, aquí puedes controlar todos los cursos del sitio
+                </p>
+            </div>
+        </center>
+    </div>
+
+    <br />
+    <div class="container" style="justify-content: flex-start; display: flex; width: 80%">
+        <a href="/addCursos" class="btn btn-outline-success">
+            <i class="oi oi-plus"></i>
+            &nbsp;
+            Agregar un nuevo curso
+        </a>
+    </div>
+}
+<br />
+
+@if (cursos == null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <div class="container" style="width: 100%; background-color: whitesmoke; border-radius: 20px;">
+        <br />
+        <br />
+        <!-- <div></div> -->
+    <div class="container" style="width: 80%">
+            @foreach (var curso in cursos)
+            {
+                <div class="card item text-center">
+                    <div class="row" style="align-items: center; justify-content: space-around;">
+
+                        <div class="col">
+                            <p class="text-muted">Asignatura</p>
+                            <h5 class="card-title">@curso.Titulo</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <p class="text-muted">Fecha Inicio</p>
+                            <p class="card-text">@curso.FechaInicio.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                        <div class="col-auto">
+                            <p class="text-muted">Fecha Fin</p>
+                            <p class="card-text">@curso.FechaCierre.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                        <div class="col">
+                            <p class="text-muted">Impartido por</p>
+                            <p class="card-text">@curso.ProfNombre(profesores)</p>
+                        </div>
+
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tips-@curso.IdCurso">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <!-- <div></div> -->
+                <div class="modal fade" id="tips-@curso.IdCurso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" style="text-align: center;" id="exampleModalLabel">INFORMACIÓN DEL CURSO</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="footerText">Asignatura</p>
+                                        <h6>@curso.Titulo</h6>
+                                    </div>
+
+                                    <div class="col">
+                                        <p class="footerText">Impartida por</p>
+                                        <h6>@curso.ProfNombre(profesores)</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="footerText">Inicia</p>
+                                        <h6>@curso.FechaInicio.ToString("dd/MM/yyyy")</h6>
+                                    </div>
+
+                                    <div class="col">
+                                        <p class="footerText">Finaliza</p>
+                                        <h6>@curso.FechaCierre.ToString("dd/MM/yyyy")</h6>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <p class="footerText">Link de la reunión (opcional)</p>
+                                    <h6>@curso.LinkReunion</h6>
+                                </div>
+
+                                <div class="row">
+
+                                    <p class="footerText">Material de trabajo</p>
+                                    <div class="col"><img style="cursor: pointer;" src="/MSComponents/assets/icos/pdf_filetype_icon_177525.png" width="45" height="40"></div>
+                                    <h6>@curso.Material</h6>
+                                </div>
+
+                                <div class="row">
+                                    <p class="footerText">Descripción del Curso</p>
+                                    <p class="card-text" style="text-align: justify;">@curso.Descripcion</p>
+                                </div>
+                            </div>
+
+                            @if (session.rol == "estudiante")
+                            {
+                                <div class="card-footer footerText text-center">
+                                    Ponte en contacto con el profesor para inscribirte en este curso o acude a nuestras oficinas
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="card-footer text-muted">
+                                    <div data-bs-dismiss="modal">
+                                        <a href="/updateCursos/@curso.IdCurso" type="button" class="btn btn-outline-primary">Editar</a>
+                                        <a href="/deleteCursos/@curso.IdCurso" type="button" class="btn btn-outline-dark">Eliminar</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    private readonly string api = "/api/Profesor/TodosLosCursos";
+    private IEnumerable<Curso>? cursos;
+    private IList<Profesor>? profesores;
+
+    Session session = new Session();
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        cursos = await HTTP.GetFromJsonAsync<IList<Curso>>(api);
+        if (session.rol == "profesor")
+        {
+            cursos = cursos?.Where(cur => cur.IdProfesor == session.id);
+        }
+        profesores = await HTTP.GetFromJsonAsync<IList<Profesor>>("/api/CuentaProfesor/TodosLosProfesores");
+
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            session = IsDataNull.CreateInstanceIfIsNull<Session>(await LocalStorage.GetValue<Session>(ValuesKeys.Persona));
+
+            StateHasChanged();
+
+        }
+        if (session.rol == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}
